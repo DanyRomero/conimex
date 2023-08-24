@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 const config: Config = {
   content: [
@@ -13,6 +14,15 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        conimex:{
+          gray:{
+            300: '#2B2B2B',
+            200: '#5C6061',
+            100: 'FFFFFF'
+          }
+        }
+      }
     },
   },
   plugins: [],
