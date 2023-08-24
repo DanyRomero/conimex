@@ -64,7 +64,7 @@ const AboutUs = () => {
       <div className="mt-6 flex gap-8 flex-wrap md:flex-nowrap">
         <div className="w-1/2 m-auto flex justify-center">
           <Image
-            src={"/images/team3.jpg"}
+            src={"/images/aboutUs/team3.jpg"}
             alt="team"
             width={500}
             height={500}

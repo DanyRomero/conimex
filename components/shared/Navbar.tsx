@@ -29,7 +29,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`p-1 fixed w-full z-10 flex ${
+      className={`p-1 fixed w-full z-10 flex transition-colors ${
         scrolling ? "bg-white" : "bg-transparent"
       }`}
     >
@@ -47,7 +47,7 @@ const Navbar = () => {
           <Link href={"#services"} className="font-bold">
             Servicios
           </Link>
-          <Link href={""} className="font-bold">
+          <Link href={"#projects"} className="font-bold">
             Proyectos
           </Link>
           <Link href={""} className="font-bold">
