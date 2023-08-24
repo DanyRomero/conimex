@@ -41,7 +41,7 @@ const Slider = () => {
             y te permiten enfocarte en lo que realidad importa.
           </p>
           <p className="text-white z-10 ml-64 mt-6 font-extrabold text-6xl">
-            !Hacer crecer tu negocio!
+            ¡Hacer crecer tu negocio!
           </p>
         </div>
         {slides.map((slide)=>{
