@@ -7,7 +7,7 @@ import React, { useState, useEffect } from "react";
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
   useEffect(() => {
-       const handleScroll = () => {
+    const handleScroll = () => {
       if (window.scrollY > 100) {
         setScrolling(true);
       } else {
@@ -29,37 +29,35 @@ const Navbar = () => {
 
   return (
     <div
-      className={`p-1 fixed w-full z-10 flex transition-colors ${
-        scrolling ? "bg-white" : "bg-transparent"
+      className={`p-1 fixed w-full z-10 flex transition-all duration-300 ease-in ${
+        scrolling ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
       <div>
         <Image src={logoSrc} alt="logo" width={250} height={150} />
       </div>
-      <div className=" grow">
-        <div
-          className={`flex gap-8 justify-center mt-5 -ml-40
-           ${textColor} font-bold`}
-        >
-          <Link href={"#about"} className="font-bold">
-            Nosotros
-          </Link>
-          <Link href={"#services"} className="font-bold">
-            Servicios
-          </Link>
-          <Link href={"#projects"} className="font-bold">
-            Proyectos
-          </Link>
-          <Link href={""} className="font-bold">
-            Cotización
-          </Link>
-          <Link href={""} className="font-bold">
-            Clientes
-          </Link>
-          <Link href={""} className="font-bold">
-            Contacto
-          </Link>
-        </div>
+      <div
+        className={`flex gap-8 justify-center -ml-40 transition-colors
+           ${textColor} font-bold grow items-center`}
+      >
+        <Link href={"#about"} className="font-bold">
+          Nosotros
+        </Link>
+        <Link href={"#services"} className="font-bold">
+          Servicios
+        </Link>
+        <Link href={"#projects"} className="font-bold">
+          Proyectos
+        </Link>
+        <Link href={""} className="font-bold">
+          Cotización
+        </Link>
+        <Link href={""} className="font-bold">
+          Clientes
+        </Link>
+        <Link href={""} className="font-bold">
+          Contacto
+        </Link>
       </div>
     </div>
   );

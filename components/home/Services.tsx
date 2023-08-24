@@ -106,7 +106,7 @@ const Services = () => {
               >
                 <Image
                   src={service.img}
-                  alt="security equipment"
+                  alt="service image"
                   width={service.widthImg}
                   height={service.heightImg}
                   className="p-4"
