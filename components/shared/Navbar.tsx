@@ -5,58 +5,56 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  const [scrolling, setScrolling] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+  // const [scrolling, setScrolling] = useState(false);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setScrolling(true);
+  //     } else {
+  //       setScrolling(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
-  const logoSrc = scrolling
-    ? "/images/logo_transparent_background.png"
-    : "/images/white_logo_transparent.png";
+  // const logoSrc = scrolling
+  //   ? "/images/logo_transparent_background.png"
+  //   : "/images/white_logo_transparent.png";
 
-  const textColor = scrolling ? "text-black" : "text-white";
+  // const textColor = scrolling ? "text-black" : "text-white";
 
   return (
     <div
-      className={`p-1 fixed w-full z-10 flex transition-all duration-300 ease-in ${
-        scrolling ? "bg-white shadow-sm" : "bg-transparent"
-      }`}
+      className='fixed w-full z-10 flex flex-col'
     >
-      <Link href={'#slider'}>
-        <Image src={logoSrc} alt="logo" width={250} height={150} />
+      <Link href={'#slider'} className=" bg-white">
+        <Image src='/images/logo_transparent_background.png' alt="logo" width={250} height={150} />
       </Link>
       <div
-        className={`flex gap-8 justify-center transition-colors
-           ${textColor} font-bold grow items-center`}
+        className='text-white flex md:gap-6 lg:gap-28 py-1 justify-center'
+        style={{backgroundColor:'#002F67'}}
       >
-        <Link href={"#about"} className="font-bold">
-          Nosotros
+        <Link href={"#about"}>
+          NOSOTROS
         </Link>
-        <Link href={"#services"} className="font-bold">
-          Servicios
+        <Link href={"#services"}>
+          SERVICIOS
         </Link>
-        <Link href={"#projects"} className="font-bold">
-          Proyectos
+        <Link href={"#projects"}>
+          PROYECTOS
         </Link>
-        <Link href={""} className="font-bold">
-          Clientes
+        <Link href={""}>
+          CLIENTES
         </Link>
-        <Link href={"#contact"} className="font-bold">
-          Cotizaciones y Contacto
+        <Link href={"#contact"}>
+          COTIZACIONES Y CONTACTO
         </Link>
       </div>
-      <div className="w-60"></div>
+      
     </div>
   );
 };

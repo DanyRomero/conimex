@@ -30,17 +30,17 @@ const Slider = () => {
       <div className="embla__container">
         <div className="embla__slide h-screen w-screen relative">
           <Image
-            src="/images/hero/work.jpg"
+            src="/images/hero/main.jpeg"
             alt="img slider"
             fill
             className="object-cover -z-10"
           />
-          <p className="text-white z-10 mt-40 mx-64 text-2xl">
+          <p className="text-white z-10 pt-4 mt-72 xl:mt-96 ml-10 lg:text-2xl pr-4  md:w-1/2">
             Nuestra pasión es simplificar tus compras corporativas e
             industriales, ofreciendo soluciones integrales que liberan tu tiempo
             y te permiten enfocarte en lo que realidad importa.
           </p>
-          <p className="text-white z-10 ml-64 mt-6 font-extrabold text-6xl">
+          <p className="text-white z-10 ml-10 mt-6 font-extrabold text-xl md:text-3xl lg:text-6xl">
             ¡Hacer crecer tu negocio!
           </p>
         </div>

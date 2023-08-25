@@ -1,14 +1,46 @@
+'use client';
+import { useForm } from "react-hook-form";
 import Image from "next/image";
 import React from "react";
 
+type FormValues = {
+  name: string;
+  company: string;
+  phone: string;
+  email: string;
+  message: string;
+};
+
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>();
+
+  const onSubmit = async (data: FormValues) => {
+    try {
+      console.log('data', data)
+      // const res = await fetch("/api/contact", {
+      //   method: "POST",
+      //   body: JSON.stringify(data),
+      //   headers: { "Content-Type": "application/json" },
+      // });
+      
+      // if (res.ok) {
+      //   window.alert("Email has been sent");
+      // }
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div id="contact" className="pt-24" style={{ backgroundColor: "#F7F7F7" }}>
       <h2 className="mb-3 px-6 text-2xl text-center text-conimex-gray-300 font-bold lg:w-1/2 m-auto">
         Solicita tu cotización o contáctanos por este medio
       </h2>
-      <form className="px-6">
-        <div className="flex lg:px-56 flex-wrap lg:flex-nowrap gap-4 mt-12">
+      <form   onSubmit={handleSubmit(onSubmit)} className="px-6 md:px-40 xl:px-96">
+        <div className="flex  flex-wrap md:flex-nowrap gap-4 mt-12">
           <div className="w-full">
             <label className="font-bold" htmlFor="name">
               Nombre
@@ -17,8 +49,12 @@ const Contact = () => {
               type="text"
               id="name"
               placeholder="Tu nombre"
-              className="border-conimex-gray-200 border rounded-2xl bg-transparent p-4 w-full"
+              className={`${errors.name ? 'border-red-800' : 'border-conimex-gray-200'} border rounded-2xl bg-transparent p-4 w-full`}
+              {...register("name", { required: "El nombre es requerido" })}
             />
+            {errors.name && (
+            <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">{errors.name.message}</div>
+          )}
           </div>
           <div className="w-full">
             <label className="font-bold" htmlFor="company">
@@ -28,12 +64,13 @@ const Contact = () => {
             <input
               type="text"
               id="company"
-              placeholder="Compañía"
+              placeholder="Tu compañía"
               className="border border-conimex-gray-200 rounded-2xl bg-transparent p-4 w-full"
+              {...register("company")}
             />
           </div>
         </div>
-        <div className="flex lg:px-56 flex-wrap lg:flex-nowrap gap-4 mt-8">
+        <div className="flex  flex-wrap lg:flex-nowrap gap-4 mt-8">
           <div className="w-full">
             <label className="font-bold" htmlFor="email">
               Email
@@ -42,8 +79,12 @@ const Contact = () => {
               type="text"
               id="email"
               placeholder="Dirección de email"
-              className="border-conimex-gray-200 border rounded-2xl bg-transparent p-4 w-full"
+              className={`${errors.name ? 'border-red-800' : 'border-conimex-gray-200'} border rounded-2xl bg-transparent p-4 w-full`}
+              {...register("email", { required: "El email es requerido" })}
             />
+            {errors.email && (
+            <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">{errors.email.message}</div>
+          )}
           </div>
           <div className="w-full">
             <label className="font-bold" htmlFor="phone">
@@ -53,27 +94,39 @@ const Contact = () => {
               type="text"
               id="phone"
               placeholder="Número de teléfono"
-              className="border border-conimex-gray-200 rounded-2xl bg-transparent p-4 w-full"
+              className={`${errors.name ? 'border-red-800' : 'border-conimex-gray-200'} border rounded-2xl bg-transparent p-4 w-full`}
+              {...register("phone", { required: "El teléfono es requerido" })}
             />
+            {errors.phone && (
+            <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">{errors.phone.message}</div>
+          )}
           </div>
         </div>
-        <div className="flex lg:px-56 flex-wrap lg:flex-nowrap gap-4 mt-8">
+        <div className="flex  flex-wrap lg:flex-nowrap gap-4 mt-8">
           <div className="w-full">
-            <label className="font-bold" htmlFor="text">
+            <label className="font-bold" htmlFor="message">
               ¿Cómo podemos ayudarte?
             </label>
             <textarea
-              id="text"
+              id="message"
               rows={5}
               placeholder="Ingresa tu mensaje aquí..."
               className="border-conimex-gray-200 border rounded-2xl bg-transparent p-4 w-full"
+              {...register("message")}
             />
           </div>
-        
+        </div>
+        <div className="flex justify-center my-10">
+          <button
+            type="submit"
+            className="border rounded-2xl bg-conimex-gray-300 hover:bg-conimex-gray-300/80 transition-colors text-white font-bold px-10 md:px-28 py-4"
+          >
+            Enviar
+          </button>
         </div>
       </form>
 
-      <div className="relative">
+      <div className="flex justify-center">
         <Image
           src={"/images/contact/banner.jpg"}
           alt="contact team"

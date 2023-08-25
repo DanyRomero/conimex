@@ -55,24 +55,31 @@ const Projects = () => {
   );
 
   return (
-    <div id="projects" className="py-32">
-      <h2 className="my-3 text-2xl text-center text-conimex-gray-300 font-bold md:w-1/2 m-auto">
-        Proyectos realizados
-      </h2>
-      <p className="text-center text-conimex-gray-200 my-2 mx-6 md:w-1/2 md:m-auto">
-        Ofrecemos calidad, atención personalizada y soluciones de compra de alto
-        valor. Queremos ser su socio confiable para el éxito de su empresa
-      </p>
-      <div className="flex float-right mr-6">
+    <div id="projects" className="py-24">
+      <div className="flex  mx-6 md:justify-between text-center md:text-left flex-wrap md:flex-nowrap justify-center">
+        <div>
+          <h2 className="my-3 mx-6 md:ml-20 text-2xl text-conimex-gray-300 font-bold md:w-1/2 ">
+            Proyectos realizados
+          </h2>
+          <p className="text-conimex-gray-200 my-2 md:ml-20 md:w-1/2 ">
+            Ofrecemos calidad, atención personalizada y soluciones de compra de
+            alto valor. Queremos ser su socio confiable para el éxito de su
+            empresa
+          </p>
+        </div>
+        <div className="flex items-center md:mr-6">
         <ArrowLeftCircleIcon
-          className="h-12 w- m-2 text-blue-500"
+          className="h-12 w- m-2 text-blue-500 hover:bg-blue-400 hover:text-white hover:rounded-full"
           onClick={() => scrollPrev()}
         />
         <ArrowRightCircleIcon
-          className="h-12 w-12 m-2 text-blue-500"
+          className="h-12 w-12 m-2 text-blue-500  hover:bg-blue-400 hover:text-white hover:rounded-full"
           onClick={() => scrollNext()}
         />
       </div>
+      </div>
+
+     
 
       <div className="embla ml-4 md:ml-24 mr-2 m-auto mt-20">
         <div className="embla__viewport" ref={emblaRef}>
