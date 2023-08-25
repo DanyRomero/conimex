@@ -23,6 +23,10 @@ const Footer = () => {
             Lunes a Viernes: 9:00am - 6:00pm{" "}
           </p>
         </div>
+        <div className="md:mt-4">
+          <h5 className="font-bold text-white ">Entregas a domicilio</h5>
+          <p className="text-white text-xs">Entregas a todo México</p>
+        </div>
         
       </div>
     </div>

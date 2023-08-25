@@ -48,20 +48,30 @@ const Projects = () => {
   const scrollPrev = useCallback(
     () => emblaApi && emblaApi.scrollPrev(),
     [emblaApi]
-  )
+  );
   const scrollNext = useCallback(
     () => emblaApi && emblaApi.scrollNext(),
     [emblaApi]
-  )
+  );
 
   return (
     <div id="projects" className="py-32">
       <h2 className="my-3 text-2xl text-center text-conimex-gray-300 font-bold md:w-1/2 m-auto">
         Proyectos realizados
       </h2>
+      <p className="text-center text-conimex-gray-200 my-2 mx-6 md:w-1/2 md:m-auto">
+        Ofrecemos calidad, atención personalizada y soluciones de compra de alto
+        valor. Queremos ser su socio confiable para el éxito de su empresa
+      </p>
       <div className="flex float-right mr-6">
-        <ArrowLeftCircleIcon className="h-12 w- m-2 text-blue-500" onClick={()=> scrollPrev()} />
-        <ArrowRightCircleIcon className="h-12 w-12 m-2 text-blue-500" onClick={()=> scrollNext()} />
+        <ArrowLeftCircleIcon
+          className="h-12 w- m-2 text-blue-500"
+          onClick={() => scrollPrev()}
+        />
+        <ArrowRightCircleIcon
+          className="h-12 w-12 m-2 text-blue-500"
+          onClick={() => scrollNext()}
+        />
       </div>
 
       <div className="embla ml-4 md:ml-24 mr-2 m-auto mt-20">
