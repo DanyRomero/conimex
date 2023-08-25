@@ -11,10 +11,22 @@ const Projects = () => {
 
   const images = [
     {
+      src: "/images/projects/higiene.jpeg",
+    },
+    {
       src: "/images/projects/futbolito.jpg",
     },
     {
+      src: "/images/projects/carpa.jpg",
+    },
+    {
+      src: "/images/projects/ferreteria.jpeg",
+    },
+    {
       src: "/images/projects/tv.jpg",
+    },
+    {
+      src: "/images/projects/enfriadores.jpeg",
     },
     {
       src: "/images/projects/instalacion.jpg",
@@ -23,10 +35,25 @@ const Projects = () => {
       src: "/images/projects/cubrebocas.jpg",
     },
     {
+      src: "/images/projects/patin.jpeg",
+    },
+    {
+      src: "/images/projects/bolsas.jpeg",
+    },
+    {
       src: "/images/projects/refri.jpg",
     },
     {
       src: "/images/projects/licuadoras.jpg",
+    },
+    {
+      src: "/images/projects/herramientas.jpeg",
+    },
+    {
+      src: "/images/projects/dial.jpeg",
+    },
+    {
+      src: "/images/projects/diales.jpeg",
     },
     {
       src: "/images/projects/sala.jpg",
@@ -37,12 +64,7 @@ const Projects = () => {
     {
       src: "/images/projects/sala2.jpg",
     },
-    {
-      src: "/images/projects/carpa.jpg",
-    },
-    {
-      src: "/images/projects/patin.jpeg",
-    },
+    
   ];
 
   const scrollPrev = useCallback(
@@ -88,11 +110,11 @@ const Projects = () => {
               return (
                 <div className="shrink-0" key={index}>
                   <Image
-                    className="embla__slide__img rounded-lg"
+                    className="embla__slide__img rounded-lg max-h-96"
                     src={img.src}
                     alt="slide image"
-                    width={400}
-                    height={300}
+                    width={300}
+                    height={400}
                   />
                 </div>
               );
