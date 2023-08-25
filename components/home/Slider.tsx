@@ -35,7 +35,7 @@ const Slider = () => {
             fill
             className="object-cover -z-10"
           />
-          <p className="text-white z-10 pt-4 mt-72 xl:mt-96 ml-10 lg:text-2xl pr-4  md:w-1/2">
+          <p className="text-white z-10 pt-4 mt-72  ml-10 lg:text-2xl pr-4  md:w-1/2">
             Nuestra pasión es simplificar tus compras corporativas e
             industriales, ofreciendo soluciones integrales que liberan tu tiempo
             y te permiten enfocarte en lo que realidad importa.
