@@ -5,28 +5,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
-  // const [scrolling, setScrolling] = useState(false);
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 100) {
-  //       setScrolling(true);
-  //     } else {
-  //       setScrolling(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  // const logoSrc = scrolling
-  //   ? "/images/logo_transparent_background.png"
-  //   : "/images/white_logo_transparent.png";
-
-  // const textColor = scrolling ? "text-black" : "text-white";
-
+  
   return (
     <div
       className='fixed w-full z-10 flex flex-col'
