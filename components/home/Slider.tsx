@@ -26,7 +26,7 @@ const Slider = () => {
   ]
 
   return (
-    <div className="embla" ref={emblaRef}>
+    <div id='slider' className="embla" ref={emblaRef}>
       <div className="embla__container">
         <div className="embla__slide h-screen w-screen relative">
           <Image

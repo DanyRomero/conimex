@@ -102,7 +102,7 @@ const Services = () => {
           return (
             <div key={service.title} className="relative overflow-hidden group">
               <div
-                className={`${service.color} h-96 md:group-hover:-translate-y-44 transition-all flex items-center justify-center`}
+                className={`${service.color} h-96 lg:group-hover:-translate-y-44 transition-all flex items-center justify-center`}
               >
                 <Image
                   src={service.img}
@@ -112,7 +112,7 @@ const Services = () => {
                   className="p-4"
                 />
               </div>
-              <div className="md:absolute bottom-0 md:translate-y-44 group-hover:translate-y-0 transition-all">
+              <div className="lg:absolute bottom-0 lg:translate-y-44 group-hover:translate-y-0 transition-all">
                 <h6 className="font-semibold text-center text-conimex-gray-300 p-2">
                   {service.title}
                 </h6>

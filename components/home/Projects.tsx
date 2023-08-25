@@ -64,7 +64,7 @@ const Projects = () => {
         <ArrowRightCircleIcon className="h-12 w-12 m-2 text-blue-500" onClick={()=> scrollNext()} />
       </div>
 
-      <div className="embla ml-24 m-auto mt-20">
+      <div className="embla ml-4 md:ml-24 mr-2 m-auto mt-20">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container items-end gap-6">
             {images.map((img, index) => {

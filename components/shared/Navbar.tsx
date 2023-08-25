@@ -33,11 +33,11 @@ const Navbar = () => {
         scrolling ? "bg-white shadow-sm" : "bg-transparent"
       }`}
     >
-      <div>
+      <Link href={'#slider'}>
         <Image src={logoSrc} alt="logo" width={250} height={150} />
-      </div>
+      </Link>
       <div
-        className={`flex gap-8 justify-center -ml-40 transition-colors
+        className={`flex gap-8 justify-center transition-colors
            ${textColor} font-bold grow items-center`}
       >
         <Link href={"#about"} className="font-bold">
@@ -50,15 +50,13 @@ const Navbar = () => {
           Proyectos
         </Link>
         <Link href={""} className="font-bold">
-          Cotización
-        </Link>
-        <Link href={""} className="font-bold">
           Clientes
         </Link>
-        <Link href={""} className="font-bold">
-          Contacto
+        <Link href={"#contact"} className="font-bold">
+          Cotizaciones y Contacto
         </Link>
       </div>
+      <div className="w-60"></div>
     </div>
   );
 };
