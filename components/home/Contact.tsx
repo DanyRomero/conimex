@@ -1,7 +1,9 @@
-'use client';
+"use client";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import React from "react";
+import { useState } from "react";
+import { CheckIcon } from "@heroicons/react/24/solid";
 
 type FormValues = {
   name: string;
@@ -12,6 +14,7 @@ type FormValues = {
 };
 
 const Contact = () => {
+  const [confirmation, setConfirmation] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,15 +23,16 @@ const Contact = () => {
 
   const onSubmit = async (data: FormValues) => {
     try {
-      console.log('data', data)
+      setConfirmation(true);
+      console.log("data", data);
       // const res = await fetch("/api/contact", {
       //   method: "POST",
       //   body: JSON.stringify(data),
       //   headers: { "Content-Type": "application/json" },
       // });
-      
+
       // if (res.ok) {
-      //   window.alert("Email has been sent");
+      //   setConfirmation(false)
       // }
     } catch (err) {
       console.log(err);
@@ -39,7 +43,10 @@ const Contact = () => {
       <h2 className="mb-3 px-6 text-2xl text-center text-conimex-gray-300 font-bold lg:w-1/2 m-auto">
         Solicita tu cotización o contáctanos por este medio
       </h2>
-      <form   onSubmit={handleSubmit(onSubmit)} className="px-6 md:px-40 xl:px-96">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="px-6 md:px-40 xl:px-96"
+      >
         <div className="flex  flex-wrap md:flex-nowrap gap-4 mt-12">
           <div className="w-full">
             <label className="font-bold" htmlFor="name">
@@ -49,12 +56,16 @@ const Contact = () => {
               type="text"
               id="name"
               placeholder="Tu nombre"
-              className={`${errors.name ? 'border-red-800' : 'border-conimex-gray-200'} border rounded-2xl bg-transparent p-4 w-full`}
+              className={`${
+                errors.name ? "border-red-800" : "border-conimex-gray-200"
+              } border rounded-2xl bg-transparent p-4 w-full`}
               {...register("name", { required: "El nombre es requerido" })}
             />
             {errors.name && (
-            <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">{errors.name.message}</div>
-          )}
+              <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">
+                {errors.name.message}
+              </div>
+            )}
           </div>
           <div className="w-full">
             <label className="font-bold" htmlFor="company">
@@ -79,12 +90,16 @@ const Contact = () => {
               type="text"
               id="email"
               placeholder="Dirección de email"
-              className={`${errors.name ? 'border-red-800' : 'border-conimex-gray-200'} border rounded-2xl bg-transparent p-4 w-full`}
+              className={`${
+                errors.name ? "border-red-800" : "border-conimex-gray-200"
+              } border rounded-2xl bg-transparent p-4 w-full`}
               {...register("email", { required: "El email es requerido" })}
             />
             {errors.email && (
-            <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">{errors.email.message}</div>
-          )}
+              <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">
+                {errors.email.message}
+              </div>
+            )}
           </div>
           <div className="w-full">
             <label className="font-bold" htmlFor="phone">
@@ -94,12 +109,16 @@ const Contact = () => {
               type="text"
               id="phone"
               placeholder="Número de teléfono"
-              className={`${errors.name ? 'border-red-800' : 'border-conimex-gray-200'} border rounded-2xl bg-transparent p-4 w-full`}
+              className={`${
+                errors.name ? "border-red-800" : "border-conimex-gray-200"
+              } border rounded-2xl bg-transparent p-4 w-full`}
               {...register("phone", { required: "El teléfono es requerido" })}
             />
             {errors.phone && (
-            <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">{errors.phone.message}</div>
-          )}
+              <div className="mt-2 text-sm rounded-lg text-center bg-red-200 text-red-800">
+                {errors.phone.message}
+              </div>
+            )}
           </div>
         </div>
         <div className="flex  flex-wrap lg:flex-nowrap gap-4 mt-8">
@@ -125,6 +144,14 @@ const Contact = () => {
           </button>
         </div>
       </form>
+      
+      {confirmation && (
+        <div className="flex justify-center bg-green-500 text-white py-2">
+          {" "}
+          <CheckIcon className="w-6 h-6" />
+          <p>Correo enviado</p>{" "}
+        </div>
+      )}
 
       <div className="flex justify-center">
         <Image
