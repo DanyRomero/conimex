@@ -18,7 +18,7 @@ export async function POST(request: Request) {
       to: process.env.EMAIL_NOTIFICATIONS_RECIPIENT,
       from: process.env.EMAIL_NOTIFICATIONS_SENDER,
       subject: "¡CONIMEX nuevo contacto!",
-      template: "conimex",
+      template: "contact-form-conimex",
       "h:X-Mailgun-Variables": JSON.stringify(data),
     });
     return NextResponse.json({ success: true });

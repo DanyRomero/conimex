@@ -18,11 +18,11 @@ const Slider = () => {
     },
     {
       src: "/images/hero/office3.jpg",
-      textColor: "text-conimex-gray-300",
+      textColor: "text-white",
     },
     {
       src: "/images/hero/industrial.jpg",
-      textColor: "text-conimex-gray-300",
+      textColor: "text-white",
     },
     {
       src: "/images/hero/soldador.jpg",
@@ -45,20 +45,21 @@ const Slider = () => {
           return (
             <div
               key={slide.src}
-              className="embla__slide h-screen w-screen relative"
+              className="embla__slide h-screen w-screen relative bg-black/30"
             >
               <Image
                 src={slide.src}
                 alt="img slider"
                 fill
-                className="object-cover -z-10"
+                className="object-cover -z-20"
               />
-              <p className={`${slide.textColor} z-10 pt-4 mt-72  ml-10 lg:text-2xl pr-4  md:w-1/2`}>
+             
+              <p className={`${slide.textColor} z-20 pt-4 mt-72  ml-10 lg:text-2xl pr-4  md:w-1/2`}>
                 Nuestra pasión es simplificar tus compras corporativas e
                 industriales, ofreciendo soluciones integrales que liberan tu
                 tiempo y te permiten enfocarte en lo que realidad importa.
               </p>
-              <p className={`${slide.textColor} z-10 ml-10 mt-6 font-extrabold text-xl md:text-3xl lg:text-6xl`}>
+              <p className={`${slide.textColor} z-20 ml-10 mt-6 font-extrabold text-xl md:text-3xl lg:text-6xl`}>
                 ¡Hacer crecer tu negocio!
               </p>
             </div>
