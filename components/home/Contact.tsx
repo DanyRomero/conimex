@@ -14,7 +14,7 @@ type FormValues = {
 };
 
 const Contact = () => {
-  const [confirmation, setConfirmation] = useState(false);
+  const [confirmation, setConfirmation] = useState(true);
   const {
     register,
     handleSubmit,
@@ -150,13 +150,13 @@ const Contact = () => {
       )}
 
       {confirmation && (
-        <div>
-          <div className="flex flex-col items-center px-6 lg:w-1/2 m-auto gap-5 justify-center pb-9">
+        <div className="rounded-lg md:w-1/2 m-auto p-9 bg-stone-200/25">
+          <div className="flex flex-col items-center lg:w-1/2 m-auto gap-5 justify-center pb-9">
             <span>
               {" "}
               <CheckCircleIcon className="w-16 h-16  text-blue-900" />
             </span>
-            <h2 className="my-3 text-3xl text-center text-blue-500 font-bold ">
+            <h2 className="my-3 text-2xl md:text-3xl text-center text-blue-500 font-bold ">
               ¡Tu mensaje ha sido enviado!
             </h2>
           </div>
@@ -172,7 +172,7 @@ const Contact = () => {
         </div>
       )}
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-4">
         <Image
           src={"/images/contact/banner.jpg"}
           alt="contact team"
