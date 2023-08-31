@@ -7,72 +7,71 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <div id="about" className="py-24 container mx-auto px-10 bg-slate-50	">
-      <h1 className="my-3 text-2xl text-center text-conimex-gray-300 font-bold md:w-1/2 m-auto">
-        Centraliza tus compras en un solo lugar y libera tu tiempo para
-        concentrarte en lo que realmente importa:
-      </h1>
-      <h1 className="my-3 text-2xl text-center text-conimex-gray-300 font-bold md:w-1/2 m-auto">
-        Hacer crecer tu negocio.
+    <div id="about" className="py-24 container mx-auto px-10 md:px-32 bg-slate-50	">
+      <h1 className="my-3 text-2xl  text-conimex-gray-300 font-bold m-auto">
+        ¿Quénes somos?
       </h1>
 
-      <p className="text-center text-conimex-gray-200 my-2 md:w-1/2 m-auto">
-        Nos especializamos en ser tu aliado estratégico en compras,
-        proporcionando los materiales esenciales para impulsar tus proyectos, ya
-        sean únicos o recurrentes.
+      <p className="text-conimex-gray-200 my-2">
+        Somos una empresa mexicana especializada en el suministro integral de
+        materiales para corporativos e industrial. Comenzando operaciones en el
+        año 2018, Conimex Importadora S.A de C.V. nace de la experiencia de un
+        grupo multidisciplinario de colaboradores con más de 10 años de
+        experiencia en el sector, brindando{" "}
+        <strong>soluciones de compras enfocado en corporativos.</strong>{" "}
       </p>
+      <p className="text-conimex-gray-200 my-2">
+        Nos enfocamos en brindar una solución integral para tu área de compras,
+        encargándonos de proveer los materiales que tu negocio necesita para
+        proyectos especiales o recurrentes.
+      </p>
+      <h1 className="my-6 text-2xl text-center text-conimex-gray-300 font-bold m-auto">
+      ¡Tus compras en un solo lugar! 
+      </h1>
+      
+      <div className="flex gap-10 mt-10 flex-wrap lg:flex-nowrap items-center justify-center">
+        <div className="lg:w-1/2 flex gap-4 flex-col">
+          <div className="bg-white p-8 rounded-xl">
+            <StarIcon className="h-8 w-8 my-2 text-blue-500" />
+            <h4 className="text-xl  text-conimex-gray-300 font-semibold  mb-4">
+              Misión
+            </h4>
+            <p className=" text-conimex-gray-200">
+              Ser una empresa líder en el suministro integral de materiales para
+              corporativos e industrial, brindando soluciones de compras
+              personalizadas y eficientes a nuestros clientes, con un enfoque en
+              la satisfacción total del cliente.
+            </p>
+          </div>
+          <div className="bg-white p-8 rounded-xl">
+            <EyeIcon className="h-8 w-8 my-2 text-blue-500" />
 
-      <div className="flex gap-10 mt-10 flex-wrap">
-        <div className="bg-white p-8 rounded-xl flex-1">
-          <BuildingOfficeIcon className="h-8 w-8 my-2 text-blue-500" />
-          <h4 className="text-xl  text-conimex-gray-300 font-semibold mb-4">
-            Historia
-          </h4>
-          <p className=" text-conimex-gray-200">
-            Conimex Importadora S.A de C.V. es una empresa mexicana fundada en
-            2018 por un equipo de expertos con más de 10 años de experiencia en
-            suministros corporativos e industriales. Nos especializamos en
-            ofrecer soluciones de compra integral para empresas.
-          </p>
+            <h4 className="text-xl  text-conimex-gray-300 font-semibold  mb-4">
+              Visión
+            </h4>
+            <p className=" text-conimex-gray-200">
+              Ser reconocidos como la mejor opción en el mercado de suministros
+              de materiales para corporativos e industrial, gracias a la calidad
+              de nuestros productos, la excelencia en nuestros servicios y la
+              satisfacción de nuestros clientes.
+            </p>
+          </div>         
         </div>
-        <div className="bg-white p-8 rounded-xl flex-1">
-          <StarIcon className="h-8 w-8 my-2 text-blue-500" />
-          <h4 className="text-xl  text-conimex-gray-300 font-semibold  mb-4">
-            Misión
-          </h4>
-          <p className=" text-conimex-gray-200">
-            Ser una empresa líder en el suministro integral de materiales para
-            corporativos e industrial, brindando soluciones de compras
-            personalizadas y eficientes a nuestros clientes, con un enfoque en
-            la satisfacción total del cliente.
-          </p>
-        </div>
-        <div className="bg-white p-8 rounded-xl flex-1">
-          <EyeIcon className="h-8 w-8 my-2 text-blue-500" />
-
-          <h4 className="text-xl  text-conimex-gray-300 font-semibold  mb-4">
-            Visión
-          </h4>
-          <p className=" text-conimex-gray-200">
-            Ser reconocidos como la mejor opción en el mercado de suministros de
-            materiales para corporativos e industrial, gracias a la calidad de
-            nuestros productos, la excelencia en nuestros servicios y la
-            satisfacción de nuestros clientes.
-          </p>
-        </div>
+        <div>
+              <Image src="/images/aboutUs/items.jpeg" alt="about us image"width={700} height={700}/>
+          </div>
       </div>
-      <div className="mt-6 flex gap-8 flex-wrap md:flex-nowrap">
-        <div className="w-1/2 m-auto flex justify-center">
+      <div className="mt-6 flex gap-10 flex-wrap-reverse lg:flex-nowrap items-center">
+        <div >
           <Image
-            src={"/images/aboutUs/team3.jpg"}
+            src={"/images/aboutUs/team.png"}
             alt="team"
-            width={500}
-            height={500}
-            className="rounded-full"
+            width={650}
+            height={650}
           />
         </div>
 
-        <div className="bg-white p-8 rounded-xl md:w-1/2">
+        <div className="bg-white  p-8 rounded-xl lg:w-1/2">
           <HeartIcon className="h-8 w-8 my-2 text-blue-500" />
 
           <h4 className="text-xl  text-conimex-gray-300 font-semibold  mb-4">

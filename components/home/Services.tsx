@@ -41,27 +41,27 @@ const Services = () => {
     },
     {
       color: "bg-blue-200",
-      title: "Sanidad",
+      title: "Sanidad y limpieza",
       description:
         "Ofrecemos productos sanitarios para un ambiente empresarial saludable y seguro, incluyendo cubrebocas, termómetros, sanitizantes y oxímetros.",
-      img: "/images/services/sanidad.webp",
-      widthImg: 490,
-      heightImg: 220,
+      img: "/images/services/sanidad2.png",
+      widthImg: 330,
+      heightImg: 160,
     },
     {
       color: "bg-blue-300",
       title: "Mobiliario",
       description:
-      "Tenemos una amplia selección de mobiliario funcional y elegante para sus instalaciones, incluyendo sillas, sillones, mesas, escritorios y anaqueles.",
-      img: "/images/services/mobiliario.webp",
-      widthImg: 490,
+        "Tenemos una amplia selección de mobiliario funcional y elegante para sus instalaciones, incluyendo sillas, sillones, mesas, escritorios y anaqueles.",
+      img: "/images/services/rack.png",
+      widthImg: 290,
       heightImg: 220,
     },
     {
       color: "bg-sky-100",
       title: "Uniformes",
       description:
-      "Ofrecemos uniformes corporativos de alta calidad y comodidad, desde chalecos y cascos hasta botas y batas, que reflejan la identidad de su empresa.",
+        "Ofrecemos uniformes corporativos de alta calidad y comodidad, desde chalecos y cascos hasta botas y batas, que reflejan la identidad de su empresa.",
       img: "/images/services/uniformes.webp",
       widthImg: 490,
       heightImg: 220,
@@ -70,18 +70,18 @@ const Services = () => {
       color: "bg-sky-200",
       title: "Regalos coporativos",
       description:
-      "Destaque su empresa con regalos corporativos únicos y personalizados, desde tarjetas regalo hasta bicicletas y motos, fortaleciendo relaciones con clientes y empleados.",
-      img: "/images/services/bici.webp",
-      widthImg: 500,
-      heightImg: 180,
+        "Destaque su empresa con regalos corporativos únicos y personalizados, desde tarjetas regalo hasta bicicletas y motos, fortaleciendo relaciones con clientes y empleados.",
+      img: "/images/services/hello-awesome.png",
+      widthImg: 400,
+      heightImg: 150,
     },
     {
       color: "bg-sky-300",
       title: "Cotizaciones Personalizadas",
       description:
-      "Entendemos que cada cliente tiene necesidades únicas. Por eso, ofrecemos cotizaciones personalizadas para adaptarnos a sus requisitos específicos y presupuesto.",
-      img: "/images/services/callcenter.png",
-      widthImg: 500,
+        "Entendemos que cada cliente tiene necesidades únicas. Por eso, ofrecemos cotizaciones personalizadas para adaptarnos a sus requisitos específicos y presupuesto.",
+      img: "/images/services/cotizacionesPer.png",
+      widthImg: 440,
       heightImg: 100,
     },
   ];
@@ -91,11 +91,13 @@ const Services = () => {
         Líneas de servicio{" "}
       </h2>
       <p className="text-center text-conimex-gray-200 my-2 mx-6 md:w-1/2 md:m-auto">
-        Nuestra misión es simple pero poderosa: desbloquear su potencial
-        empresarial. ¿Cómo lo hacemos? Proporcionando soluciones integrales y
-        eficientes de compras que simplifican sus operaciones, liberándolos para
-        centrarse en lo que realmente importa: el crecimiento de sus negocios. A
-        continuación, le presentamos una selección de nuestros servicios clave:
+        Sabemos lo importante que es tener proveedores de confianza por lo que
+        en CONIMEX estamos comprometidos con tu satisfacción y ofrecemos un
+        servicio de cotización para cada uno de tus requerimientos
+      </p>
+      <p className="text-center text-conimex-gray-200 my-3 mx-6 md:w-1/2 md:m-auto">
+        A continuación, le presentamos una selección de nuestros servicios
+        clave:
       </p>
       <div className="grid md:grid-cols-3 gap-2 mt-16">
         {servicesList.map((service) => {

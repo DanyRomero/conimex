@@ -39,7 +39,7 @@ const Navbar = () => {
           />
         </svg>
       </div>
-
+    {/* MOBILE */}
       <Transition
         show={isMobileNavOpen}
         enter="transition-opacity duration-300"
@@ -78,6 +78,9 @@ const Navbar = () => {
             </button>
           </div>
           <div className="flex flex-col gap-5 pl-4">
+            <Link href="#slider" onClick={toggleNav}>
+              INICIO
+            </Link>
             <Link href="#about" onClick={toggleNav}>
               NOSOTROS
             </Link>
@@ -115,10 +118,12 @@ const Navbar = () => {
         </div>
       </Transition>
 
+      {/* WEB */}
       <div
         className="text-white md:gap-6 lg:gap-28 py-1 justify-center hidden md:flex w-full"
         style={{ backgroundColor: "#002F67" }}
       >
+        <Link href={"#slider"}>INICIO</Link>
         <Link href={"#about"}>NOSOTROS</Link>
         <Link href={"#services"}>SERVICIOS</Link>
         <Link href={"#projects"}>PROYECTOS</Link>

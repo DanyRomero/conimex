@@ -24,16 +24,15 @@ const Contact = () => {
   const onSubmit = async (data: FormValues) => {
     try {
       setConfirmation(true);
-      console.log("data", data);
-      // const res = await fetch("/api/contact", {
-      //   method: "POST",
-      //   body: JSON.stringify(data),
-      //   headers: { "Content-Type": "application/json" },
-      // });
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      });
 
-      // if (res.ok) {
-      //   setConfirmation(false)
-      // }
+      if (res.ok) {
+        setConfirmation(false)
+      }
     } catch (err) {
       console.log(err);
     }

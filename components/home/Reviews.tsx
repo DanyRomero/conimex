@@ -59,7 +59,7 @@ const Reviews = () => {
     },
   ];
   return (
-    <div id="reviews" className="py-14 container md:px-10">
+    <div id="reviews" className="py-14 container m-auto md:px-10">
       <h2 className="text-2xl text-conimex-gray-300 font-bold text-center m-auto ">
         Testimoniales
       </h2>

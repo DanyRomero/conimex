@@ -1,41 +1,104 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-900 py-20">
+    <div className="bg-blue-900 py-6">
       <div className="container px-10 md:px-28 flex gap-10 flex-wrap md:flex-nowrap justify-between">
-        <div className="flex gap-16 md:gap-8 lg:gap-24">
-          <div className="md:mt-4">
-            <h5 className="font-bold text-white">Contacto</h5>
-            <a className="text-white text-xs" href="tel:5544367353">
-              Teléfono: 5544367353
-            </a>
-            <br />
-            <a
-              className="text-white text-xs"
-              href="mailto:contacto@conimeximp.com"
-            >
-              Correo: contacto@conimeximp.com
-            </a>
+        <div className="hidden md:flex flex-col  text-white">
+          <h6 className="font-bold">MENU</h6>
+          <Link href={"#slider"} className="text-xs">
+            - INICIO
+          </Link>
+          <Link href={"#about"} className="text-xs">
+            - NOSOTROS
+          </Link>
+          <Link href={"#services"} className="text-xs">
+            - SERVICIOS
+          </Link>
+          <Link href={"#projects"} className="text-xs">
+            - PROYECTOS
+          </Link>
+          <Link href={"#reviews"} className="text-xs">
+            - CLIENTES
+          </Link>
+          <Link href={"#contact"} className="text-xs">
+            - COTIZACIONES Y CONTACTO
+          </Link>
+        </div>
+        <div className="flex flex-col-reverse md:flex-row gap-8 lg:gap-24">
+          <div>
+            <div className="flex flex-col">
+              <h5 className="font-bold text-white">Contacto</h5>
+              <a className="text-white text-xs" href="tel:5544367353">
+                Teléfono: 5544367353
+              </a>
+              <a
+                className="text-white text-xs"
+                href="mailto:contacto@conimeximp.com"
+              >
+                Correo: contacto@conimeximp.com
+              </a>
+            </div>
+            <div className="flex gap-3 mt-4">
+              <Image
+                src="/images/footer/truck.svg"
+                alt="truck image"
+                width={30}
+                height={15}
+              />
+              <p className="text-white font-bold">
+                Entregas a domicilio en todo México
+              </p>
+            </div>
           </div>
-          <div className="md:mt-4">
-            <h5 className="font-bold text-white ">Horario</h5>
-            <p className="text-white text-xs">
-              Lunes a Viernes: 9:00am - 6:00pm{" "}
-            </p>
+          <div>
+            <div>
+              <h5 className="font-bold text-white ">Horario</h5>
+              <p className="text-white text-xs">L-V: 9:00 - 10:00 hrs </p>
+            </div>
+            <div>
+              <h5 className="font-bold text-white mt-7">Redes Sociales</h5>
+              <div className="flex gap-4">
+                <Link href="">
+                  <Image
+                    src="/images/footer/linkedin.png"
+                    alt="social media"
+                    width={22}
+                    height={22}
+                  />
+                </Link>
+                <Link href="">
+                  <Image
+                    src="/images/footer/instagram.png"
+                    alt="social media"
+                    width={22}
+                    height={22}
+                  />
+                </Link>
+                <Link href="">
+                  <Image
+                    src="/images/footer/facebook.png"
+                    alt="social media"
+                    width={22}
+                    height={22}
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <div>
-          <div className="md:mt-4 flex items-start gap-3">
+          <div className="flex flex-col items-start">
             <Image
-              src="/images/footer/truck.svg"
-              alt="truck image"
-              width={30}
-              height={15}
+              src="/images/white_logo_transparent.png"
+              alt="logo"
+              width={250}
+              height={75}
             />
-            <p className="text-white font-bold">
-              Entregas a domicilio en todo México
+            <p className="text-white text-xs px-5">
+              CONIMEX IMPORTADORA S.A. DE C.V.
             </p>
           </div>
         </div>

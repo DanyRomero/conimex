@@ -11,6 +11,12 @@ const Projects = () => {
 
   const images = [
     {
+      src: "/images/projects/cajasPapel.jpg",
+    },
+    {
+      src: "/images/projects/carga.jpg",
+    },
+    {
       src: "/images/projects/higiene.jpeg",
     },
     {
@@ -64,7 +70,6 @@ const Projects = () => {
     {
       src: "/images/projects/sala2.jpg",
     },
-    
   ];
 
   const scrollPrev = useCallback(
@@ -84,24 +89,24 @@ const Projects = () => {
             Proyectos realizados
           </h2>
           <p className="text-conimex-gray-200 my-2 md:ml-20 md:w-1/2 ">
-            Ofrecemos calidad, atención personalizada y soluciones de compra de
-            alto valor. Queremos ser su socio confiable para el éxito de su
-            empresa
+            Con más de <strong>500 proyectos ejecutados</strong>; te presentamos de manera visual
+            nuestro compromiso con la excelencia y el éxito en cada proyecto.
+            Desde seguridad industrial, limpieza, mantenimiento, hasta productos
+            electrónicos de vanguardia, estas imágenes capturan nuestra <strong>pasión
+            por brindar soluciones de calidad a corporativos.</strong>
           </p>
         </div>
-        <div className="flex items-center md:mr-6">
-        <ArrowLeftCircleIcon
-          className="h-12 w- m-2 text-blue-500 hover:bg-blue-400 hover:text-white hover:rounded-full"
-          onClick={() => scrollPrev()}
-        />
-        <ArrowRightCircleIcon
-          className="h-12 w-12 m-2 text-blue-500  hover:bg-blue-400 hover:text-white hover:rounded-full"
-          onClick={() => scrollNext()}
-        />
+        <div className="hidden lg:flex items-center md:mr-6">
+          <ArrowLeftCircleIcon
+            className="h-12 w- m-2 text-blue-500 hover:bg-blue-400 hover:text-white hover:rounded-full"
+            onClick={() => scrollPrev()}
+          />
+          <ArrowRightCircleIcon
+            className="h-12 w-12 m-2 text-blue-500  hover:bg-blue-400 hover:text-white hover:rounded-full"
+            onClick={() => scrollNext()}
+          />
+        </div>
       </div>
-      </div>
-
-     
 
       <div className="embla ml-4 md:ml-24 mr-2 m-auto mt-20">
         <div className="embla__viewport" ref={emblaRef}>
