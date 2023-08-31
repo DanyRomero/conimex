@@ -61,7 +61,7 @@ const Footer = () => {
             <div>
               <h5 className="font-bold text-white mt-7">Redes Sociales</h5>
               <div className="flex gap-4">
-                <Link href="">
+                <Link href="https://www.linkedin.com/company/conimex-imp/"  target="_blank">
                   <Image
                     src="/images/footer/linkedin.png"
                     alt="social media"
@@ -69,7 +69,7 @@ const Footer = () => {
                     height={22}
                   />
                 </Link>
-                <Link href="">
+                <Link href="https://www.instagram.com/conimex_imp/?hl=es" target="_blank">
                   <Image
                     src="/images/footer/instagram.png"
                     alt="social media"
@@ -77,7 +77,7 @@ const Footer = () => {
                     height={22}
                   />
                 </Link>
-                <Link href="">
+                <Link href="https://m.facebook.com/people/Conimex-Imp/100064838021836/" target="_blank">
                   <Image
                     src="/images/footer/facebook.png"
                     alt="social media"
