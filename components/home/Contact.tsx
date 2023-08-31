@@ -14,7 +14,7 @@ type FormValues = {
 };
 
 const Contact = () => {
-  const [confirmation, setConfirmation] = useState(true);
+  const [confirmation, setConfirmation] = useState(false);
   const {
     register,
     handleSubmit,
