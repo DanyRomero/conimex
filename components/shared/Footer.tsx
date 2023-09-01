@@ -4,9 +4,9 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-900 py-6">
-      <div className="container px-10 md:px-28 flex gap-10 flex-wrap md:flex-nowrap justify-between">
-        <div className="hidden md:flex flex-col  text-white">
+    <div className="bg-blue-900 py-6 flex justify-center">
+      <div className="container px-10 lg:px-28 flex gap-10 flex-wrap lg:flex-nowrap justify-center">
+        <div className="hidden lg:flex flex-col text-white lg:justify-center">
           <h6 className="font-bold">MENU</h6>
           <Link href={"#slider"} className="text-xs">
             - INICIO
@@ -27,7 +27,7 @@ const Footer = () => {
             - COTIZACIONES Y CONTACTO
           </Link>
         </div>
-        <div className="flex flex-col-reverse md:flex-row gap-8 lg:gap-24">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-24">
           <div>
             <div className="flex flex-col">
               <h5 className="font-bold text-white">Contacto</h5>
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start justify-center">
             <Image
               src="/images/white_logo_transparent.png"
               alt="logo"
