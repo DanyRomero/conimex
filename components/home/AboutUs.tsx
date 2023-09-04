@@ -9,7 +9,7 @@ const AboutUs = () => {
   return (
     <div id="about" className="py-24 container mx-auto px-10 md:px-32 bg-slate-50	">
       <h1 className="my-3 text-2xl  text-conimex-gray-300 font-bold m-auto">
-        ¿Quénes somos?
+        ¿Quiénes somos?
       </h1>
 
       <p className="text-conimex-gray-200 my-2">

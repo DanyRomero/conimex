@@ -20,10 +20,19 @@ const Projects = () => {
       src: "/images/projects/higiene.jpeg",
     },
     {
+      src: "/images/projects/cinchos.jpeg",
+    },
+    {
       src: "/images/projects/futbolito.jpg",
     },
     {
+      src: "/images/projects/carpa2.jpeg",
+    },
+    {
       src: "/images/projects/carpa.jpg",
+    },
+    {
+      src: "/images/projects/entregas.jpeg",
     },
     {
       src: "/images/projects/ferreteria.jpeg",
@@ -35,6 +44,12 @@ const Projects = () => {
       src: "/images/projects/enfriadores.jpeg",
     },
     {
+      src: "/images/projects/cintas.jpeg",
+    },
+    {
+      src: "/images/projects/entregas2.jpeg",
+    },
+    {
       src: "/images/projects/instalacion.jpg",
     },
     {
@@ -44,7 +59,13 @@ const Projects = () => {
       src: "/images/projects/patin.jpeg",
     },
     {
+      src: "/images/projects/lockers.jpeg",
+    },
+    {
       src: "/images/projects/bolsas.jpeg",
+    },
+    {
+      src: "/images/projects/bolsas2.jpeg",
     },
     {
       src: "/images/projects/refri.jpg",
@@ -53,10 +74,10 @@ const Projects = () => {
       src: "/images/projects/licuadoras.jpg",
     },
     {
-      src: "/images/projects/herramientas.jpeg",
+      src: "/images/projects/cajas1.jpeg",
     },
     {
-      src: "/images/projects/dial.jpeg",
+      src: "/images/projects/herramientas.jpeg",
     },
     {
       src: "/images/projects/diales.jpeg",
@@ -70,6 +91,10 @@ const Projects = () => {
     {
       src: "/images/projects/sala2.jpg",
     },
+    {
+      src: "/images/projects/cajas3.jpeg",
+    },
+   
   ];
 
   const scrollPrev = useCallback(
